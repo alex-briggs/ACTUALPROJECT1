@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Home Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Employee Reimbursement System</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="EmployeeHomePage.html">Home</a></li>
+      <li><a onclick="giveMeMoney()">Give Me Money</a></li> 
+      <li><a onclick="showMeMoney()">Show Me the Money</a></li>
+      <li><a onclick="name()">What's My Name?</a></li>
+      <li><a onclick="changename()">I don't like my name</a>
+      <li><a href="index.html">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+	<h1 style="text-align: center">Welcome to Your Home Page</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-lg-3" id="reimbursement" style="display:none">
+				<form method="post" action="ReimbursementRequestServlet">
+					<input type="text" name="requestId" placeholder="Request Id Here" id="requestId"><br /> 
+					<input type="text" name="reason" placeholder="Reason" id="reason"><br>
+					<input type="text" name="reimbursementAmount" placeholder="Request Amount Here" id="reimbursement"><br> 
+					<input type="submit" value="Submit" id="createRequestBtn">
+				</form>
+			</div>
+	</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	
+	<div class="row">
+			<div class="col-lg-3" id="pendingTable" style="display:none">
+				<table>
+					<thead>
+						<tr>
+							<th>Request</th>
+							<th>Amount</th>
+							<th>Reason</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody id="pendingRequestTable"></tbody>
+				</table>
+			</div>
+	</div>
+	<div class="col-lg-3" id="showName" style="display:none">
+		<h2>Under Construction</h2>
+	</div>
+	<div id="changeName" class="col-lg-3" style="display:none">
+		<h2>Under Construction</h2>
+	</div>
+	<script src="./homepage.js"></script>
+</body>
+</html>

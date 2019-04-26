@@ -1,0 +1,64 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>FrontController</servlet-name>
+  	<servlet-class>com.revature.web.FrontControllerServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+
+ 
+  <servlet>
+  	<servlet-name>EmployeeLoginServlet</servlet-name>
+  	<display-name>EmployeeLoginServlet</display-name>
+  	<servlet-class>com.revature.web.EmployeeLoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ManagerLoginServlet</servlet-name>
+  	<display-name>ManagerLoginServlet</display-name>
+  	<servlet-class>com.revature.web.ManagerLoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ReimbursementRequestServlet</servlet-name>
+  	<display-name>ReimbursementRequestServlet</display-name>
+  	<servlet-class>com.revature.web.ReimbursementRequestServlet</servlet-class>
+  </servlet> 
+  
+  <servlet>
+  	<servlet-name>ApprovedReimbursementServlet</servlet-name>
+  	<display-name>ApprovedReimbursementServlet</display-name>
+  	<servlet-class>com.revature.web.ApprovedReimbursementServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>FrontController</servlet-name>
+ 	 <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+  
+
+  
+  <servlet-mapping>
+  	<servlet-name>EmployeeLoginServlet</servlet-name>
+  	<url-pattern>/EmployeeLoginServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>ReimbursementRequestServlet</servlet-name>
+  	<url-pattern>/ReimbursementRequestServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+  	<servlet-name>ManagerLoginServlet</servlet-name>
+  	<url-pattern>/ManagerLoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ApprovedReimbursementServlet</servlet-name>
+  	<url-pattern>/ApprovedReimbursementServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
