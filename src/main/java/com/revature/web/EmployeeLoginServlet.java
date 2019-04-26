@@ -57,7 +57,7 @@ public class EmployeeLoginServlet extends HttpServlet {
 			}
 		}
 		else {
-			System.out.println("Wrong credentials bitch");
+			System.out.println("Wrong credentials");
 			response.sendRedirect("index.html");
 		}
 		
